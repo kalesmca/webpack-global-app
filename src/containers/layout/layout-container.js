@@ -3,6 +3,8 @@ import React from 'react';
 // import SideBarComponent from './components/sidebar';
 import "../../index.css";
 
+import { Outlet, Link } from "react-router-dom";
+
 const LayoutContainer = (props) => {
     return (
         <div>
@@ -16,11 +18,11 @@ const LayoutContainer = (props) => {
             <div className="app">
                 <input type="checkbox" id="check" />
                 <header className="header-container">
-                    <label for="check" id="">
-                        <i class="fas fa-bars" id="sidebar-btn"></i>
+                    <label htmlFor="check" id="">
+                        <i className="fas fa-bars" id="sidebar-btn"></i>
                     </label>
                     <div className="header-left">
-                        <span><h3>RMWB-Cockpit</h3></span>
+                        <span><h3>NMS Sports Club</h3></span>
 
                     </div>
                     <div className="header-right">
@@ -30,18 +32,37 @@ const LayoutContainer = (props) => {
                 </header>
 
                 <div className="sidebar">
-                    <center>
+                    {/* <center>
                         <div>Cockpit</div>
-                    </center>
+                    </center> */}
+                    <nav>
+                    
+                        <div className='link'>
+                            <i class="fas fa-home"></i>
+                            <Link to="/">Dashboard</Link>
+                        </div>
+                        <div>
+                        <i class="fas fa-address-card"></i>
+                            <Link to="/member-list">User List</Link>
+                        </div>
+                        <div>
+                            <i class="fas fa-chart-line"></i>
+                            <Link to="/member-info">Create-User</Link>
+                        </div>
+                        
+                    </nav>
+{/*                     
                     <a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a>
                     <a href="#"><i class="fas fa-address-card"></i><span>360 Feature</span></a>
                     <a href="#"><i class="fas fa-chart-line"></i><span>Customers</span></a>
                     <a href="#"><i class="fab fa-amazon-pay"></i><span>Drag</span></a>
-                    <a href="#"><i class="fas fa-star"></i><span>List</span></a>
+                    <a href="#"><i class="fas fa-star"></i><span>List</span></a> */}
                 </div>
+               
 
                 <div className="container">
-                    Main Containersss
+                    <Outlet/>
+                
             
       </div>
 

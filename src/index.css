@@ -43,7 +43,7 @@ body{
     transition-property: left;
   }
   
-  .sidebar a{
+  .sidebar div{
     color: #fff;
     display: block;
     width: 100%;
@@ -54,13 +54,16 @@ body{
     transition: 0.5s;
     transition-property: background;
   }
+  .sidebar a{
+    color: #fff;
+  }
   
   .sidebar i{
     padding-right: 10px
   }
   
   .sidebar a:hover{
-    background: #43F0F1
+    color: #43F0F1
   }
   
   label #sidebar-btn{
@@ -83,11 +86,14 @@ body{
     left: -190px;
   }
   
-  #check:checked ~ .sidebar a span{
+  #check:checked ~ .sidebar div link{
+    display: none;
+  }
+  #check:checked ~ .sidebar div a{
     display: none;
   }
   
-  #check:checked ~ .sidebar a{
+  #check:checked ~ .sidebar div{
     font-size: 20px;
     margin-left: 170px;
     width: 80px;
