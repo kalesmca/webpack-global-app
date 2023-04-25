@@ -1,5 +1,5 @@
 {
-  "name": "webpack-global-app",
+  "name": "NMS-Audit-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kalesmca/webpack-global-app#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "firebase": "^9.20.0",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
